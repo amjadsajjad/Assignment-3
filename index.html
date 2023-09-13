@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frut Brust Website Assignment 3</title>
+    <!-- tailwind and daisy ui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/3aa8a312dd.js" crossorigin="anonymous"></script>
+    <!-- font lato link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        .font-lato {
+            font-family: 'Lato', sans-serif;
+
+        }
+    </style>
+
+    <!-- custom tailwind classes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#F85559',
+                        'primary-text': '#FFF',
+                        'secondary-text': '#121212',
+                        'pri-paragraph': 'rgba(18, 18, 18, 0.60)',
+                    }
+                }
+            }
+        }
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <header class="container mx-auto">
+        <!-- nav bar -->
+        <nav class="mt-3">
+            <div
+                class="navbar bg-base-100 lg:bg-primary-bg text-primary-text rounded-full flex justify-between lg:pr-10">
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+
+                    </ul>
+                </div>
+                <div class="">
+                    <img src="images/logo.png" alt="">
+                    <a class="btn btn-ghost normal-case text-xl lg:text-primary-text text-secondary-text font-semibold">Fruit
+                        Burst</a>
+                </div>
+                <div class="gap-2">
+                    <div class="form-control relative">
+                        <input type="text" placeholder="Search"
+                            class="input input-bordered w-[100px] lg:w-[180px] h-10 rounded-full" />
+                        <i
+                            class="fa-solid fa-magnifying-glass absolute text-pri-paragraph right-3 top-[12px] lg:left-36 lg:top-3"></i>
+                    </div>
+                    <div class="dropdown text-secondary-text lg:hidden dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h7" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class=" z-[1] p-2 shadow menu menu-sm dropdown-content bg-primary-bg mt-5 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All Fruits</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- header banner  -->
+
+        <div class="relative">
+
+            <div class="carousel w-full mt-14">
+                <!-- slider-1 -->
+                <div id="slide1" class="carousel-item relative w-full">
+                    <!-- overlay image part -->
+                    <div class="hero h-[600px] rounded-xl" style="background-image: url(images/banner1.png);">
+                        <div class="hero-overlay bg-opacity-60 rounded-xl"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-md">
+                                <h1 class="mb-5 text-5xl text-primary-text font-bold">Exotic tastes at your doorstep
+                                </h1>
+                                <p class="mb-5 text-gray-300">We supply highly quality organic products.You can try or
+                                    taste our product without any hasitation.Feel free to purchase and order.We always
+                                    provide our best services in your doorstep. </p>
+                                <button
+                                    class="btn btn-primary text-primary-text bg-primary-bg border-none capitalize text-lg">Shop
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- sider - 2 -->
+                <div id="slide2" class="carousel-item relative w-full rounded-xl">
+                    <!-- overlay image part -->
+                    <div class="hero h-[600px] rounded-xl" style="background-image: url(images/banner2.png);">
+                        <div class="hero-overlay bg-opacity-60 rounded-xl"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-md">
+                                <h1 class="mb-5 text-5xl text-primary-text font-bold">Quality product in your
+                                    affordabiliy </h1>
+                                <p class="mb-5 text-gray-300">We supply highly quality organic products.You can try or
+                                    taste our product without any hasitation.Feel free to purchase and order.We always
+                                    provide our best services in your doorstep. </p>
+                                <button
+                                    class="btn btn-primary text-primary-text bg-primary-bg border-none capitalize text-lg">Order
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- slider - 3 -->
+                <div id="slide3" class="carousel-item relative w-full rounded-">
+                    <!-- overlay image part -->
+                    <div class="hero h-[600px] rounded-xl" style="background-image: url(images/banner3.png);">
+                        <div class="hero-overlay bg-opacity-60 rounded-xl"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-md">
+                                <h1 class="mb-5 text-5xl text-primary-text font-bold">Our service your satisfaction</h1>
+                                <p class="mb-5 text-gray-300">We supply highly quality organic products.You can try or
+                                    taste our product without any hasitation.Feel free to purchase and order.We always
+                                    provide our best services in your doorstep. </p>
+                                <button
+                                    class="btn btn-primary text-primary-text bg-primary-bg border-none capitalize text-lg">Shop
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- slider - 4 -->
+                <div id="slide4" class="carousel-item relative w-full rounded-xl">
+                    <!-- overlay image part -->
+                    <div class="hero h-[600px] rounded-xl" style="background-image: url(images/banner4.png);">
+                        <div class="hero-overlay bg-opacity-60 rounded-xl"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-md">
+                                <h1 class="mb-5 text-5xl text-primary-text font-bold">Healthy & Organic but cheep</h1>
+                                <p class="mb-5 text-gray-300">We supply highly quality organic products.You can try or
+                                    taste our product without any hasitation.Feel free to purchase and order.We always
+                                    provide our best services in your doorstep. </p>
+                                <button
+                                    class="btn btn-primary text-primary-text bg-primary-bg border-none capitalize text-lg">Order
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class=" lg:max-w-[1280px] max-w-[300px] h-[150px] lg:h-[250px] bg-primary-text flex justify-evenly gap-5 lg:gap-5 px-12 lg:px-10 items-center shadow-lg rounded-xl absolute lg:left-[170px] lg:top-[550px] left-10 top-[600px] ">
+
+                <div class="lg:w-[40%] w-[20%] text-center">
+                    <img class="" src="images/fruit1.png" alt="">
+                    <p class="text-gray-600 text-sm">Grapes</p>
+                </div>
+                <div class="lg:w-[40%] w-[20%] text-center">
+                    <img src="images/fruit2.png" alt="">
+                    <p class="text-gray-600 text-sm">Orange</p>
+                </div>
+                <div class="lg:w-[40%] w-[20%] text-center">
+                    <img src="images/fruit3.png" alt="">
+                    <p class="text-gray-600 text-sm">Mango</p>
+                </div>
+                <div class="lg:w-[40%] w-[20%] text-center">
+                    <img src="images/fruit4.png" alt="">
+                    <p class="text-gray-600 text-sm">Beries</p>
+                </div>
+                <div class="lg:w-[40%] w-[20%] text-center">
+                    <img src="images/fruit5.png" alt="">
+                    <p class="text-gray-600 text-sm">Punica</p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+    <main class="container mx-auto">
+        <!-- deal of the day section -->
+        <section class="my-40">
+            <h2>Deal of the day</h2>
+            <p class="text-pri-paragraph">Contrary to popular belief, is not simply random text. It has roots in a piece
+                of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <!-- card container -->
+            <div class="">
+                <div class="card w-80 bg-base-100 shadow-xl">
+                    <figure><img src="images/fruit6.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title mx-auto">12.90$ - 18.85$</h2>
+                        <p class="text-pri-paragraph mx-auto">Apple</p>
+                        <div class="rating mx-auto">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <!-- modal -->
+                        <div class="card-actions mx-auto">
+                            <!-- The button to open modal -->
+                            <a href="#my_modal_8" class="btn"></a>
+                            <!-- Put this part before </body> tag -->
+                            <div class="modal" id="my_modal_8">
+                                <div class="modal-box">
+                                    <h3 class="font-bold text-lg">Hello!</h3>
+                                    <p class="py-4">This modal works with anchor links</p>
+                                    <div class="modal-action">
+                                        <a href="#" class="btn">Yay!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
